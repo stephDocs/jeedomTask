@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]--><html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="description" content="documentation du plugin Task.">
+    <meta name="author" content="Your name goes here">
+    <meta name="copyright" content="Maybe consider a Creative Commons license">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/coderay.css">
+    <link rel="stylesheet" href="css/asciidoctor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="js/float-panel.js"></script>
+
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">ssaTask</a>
+            </h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sect1">
+<h2 id="description">Description</h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>Ce plugin propose d’automatiser les tâches que vous effectuez régulièrement.
+Apres avoir planifié les tâches (heure et jour de la semaine), elle seront alors exécutées automatiquement et vous pourrez les suivres dans la Timeline du plugin.</p>
+</div>
+<div class="paragraph">
+<p>il sera alors aisé de programmer l’ouverture de vos volets roulant tous les jours à 7h du matin sauf les WE  et jours féries.
+et cela juste en deux clics.</p>
+</div>
+<hr>
+<div class="imageblock left">
+<div class="content">
+<img src="images/desktop_all.png" alt="desktop all" width="150" height="150">
+</div>
+<div class="title">Figure 1. vue desktop</div>
+</div>
+<div class="imageblock left">
+<div class="content">
+<img src="images/desktop_date.png" alt="desktop date" width="150" height="150">
+</div>
+<div class="title">Figure 2. vue mobile</div>
+</div>
+<div class="imageblock left">
+<div class="content">
+<img src="images/desktop_histo.png" alt="desktop histo" width="150" height="150">
+</div>
+<div class="title">Figure 3. vue mobile</div>
+</div>
+<hr>
+<div class="imageblock center">
+<div class="content">
+<img src="images/desktop_stat.png" alt="desktop stat" width="450" height="300">
+</div>
+<div class="title">Figure 4. historique</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installation">Installation</h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>Il n’y a pas d’actions particuliere lors  de l’installation du plugin.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-du-plugin">Configuration du plugin</h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>Apres le  telechargement du plugin, il vous suffit juste d’activer celui-ci, il n’y a aucune configuration a ce niveau.</p>
+</div>
+<div class="paragraph">
+<p>Pour calculer l’heure de levé et de couché du soleil, le plugin utilise votre position gps.
+Par default, le plugin utilise la position de paris. Vous pouvez modifier cette coordonnée.
+la page <a href="https://www.coordonnees-gps.fr" class="bare">https://www.coordonnees-gps.fr</a> permet de retrouver facillement une coordonnée GPS à partir d’une adresse.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/plugin.png" alt="plugin">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-d-un-ssatask">Configuration d’un ssaTask</h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>La configuration des équipements "ssaTask" est accessible à partir du menu plugin :
+il vous suffit de cliquer sur le bouton "ajouter" ou sur un équipement déjà présent.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ajout.png" alt="ajout">
+</div>
+</div>
+<div class="paragraph">
+<p>La configuration des Equipements "ssaTask" s’effectue par en trois onglets :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>configuration</p>
+</li>
+<li>
+<p>tâches</p>
+</li>
+<li>
+<p>commandes</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="onglet-configuration">Onglet "Configuration"</h3>
+<hr>
+<div class="paragraph">
+<p>Cette  première étape, commune aux plugins Jeedom, consiste au réglage des paramètres généraux du "ssaTask"</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/plugin_configuration.png" alt="plugin configuration">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Cette étape permet de définir, l’objet parent, l’activation et la visibilité du "ssaTAsk", ainsi que les informations habituelles.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Cet onglet offre aussi la possibilité de définir le comportement visuel du plugin grace aux cas à cocher :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>affichage date</p>
+</li>
+<li>
+<p>affichage historique</p>
+</li>
+<li>
+<p>couleur de fonds</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="onglet-tâches">Onglet "Tâches"</h3>
+<hr>
+<div class="paragraph">
+<p>Cet onglet permet la programation  de vos différentes commandes.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/plugin_tache.png" alt="plugin tache">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Imaginons que vous voulez allumer la lumiere tous les matin à 7 heures et ouvrir les volets à 7 heures trente, rien de plus simple.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Pour créer une tâche, il faut cliquer sur le bouton "Créer une Tâche".  Cela ajoute alors une tâche vide dans la liste des tâches.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="configuration">Configuration</h4>
+<div class="paragraph">
+<p>Rien de plus simple. commencez par donner un nom à votre tâche et fixez les différents paramètres</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="heure">Heure</h4>
+<div class="paragraph">
+<p>Il s’agit ici de definir l’heure d’exéution de votre commande.
+L’heure peut etre definit de manire automatique avec les boutons sunset et sunrise (l’heure correspondant a sunrise et sunset est calculé tous les jours à 1 heure du matin).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/heure.png" alt="heure">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Vous pouvez utilisez les boutons  pour diminuer l’heure et les minutes ou les entrer directement à l’aide de votre clavier.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+les boutons "sunrise" et "sunset" permettent d’indiquer au plugin d’exécuter la commande au levé ou au couché du soleil.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="commande">Commande</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+il s’agit dans cette section de configurer les commandes qui devrons etre executés.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Pour configurer une commande, il faut utiliser le bouton "Rechercher un équipement".
+Les commandes disponible sont des commandes de type "Action".
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Dans le cas ou vous voulez exécuter plusieurs actions il faut indiquer les differentes commandes  avec le séparateur "&amp;&amp;".<br>
+Dans mon exemple, j’ai deux radiateurs et j’indique donc :<br>
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Commande ON :#[developpement][radiateur1][On]#&amp;&amp;#[developpement][radiateur2][On]#</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="jour-d-application">Jour d’application</h4>
+<div class="paragraph">
+<p>il s’agit ici d’un planning d’application de la tâche. Vous pouvez choisir d’executer votre commande le lundi, le samedi ou les jours fériés.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="onglet-commandes">Onglet "Commandes"</h3>
+<div class="paragraph">
+<p>Le plugin propose, par defaut, 5 commandes.
+Vous ne pouvez pas modifier ces commandes.
+Elles permettent d’interagir avec l’IHM.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+les commandes  peuvent etres appelées à partir de vos scénarios ou autre modules. :
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mode-d-emploi-du-ssatask">Mode d’emploi du ssaTask.</h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>L’utilisation du ssaTask est simple et intuitif. Le composant  dispose de deux boutons "on" et "off".<br>
+Ces dex boutons permettent d’activer et de desactiver le planning.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Widget 'Desktop'</caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="imageblock left">
+<div class="content">
+<img src="images/desktop_detail.png" alt="desktop detail" width="500" height="300">
+</div>
+<div class="title">Figure 5. vue desktop</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="olist guide">
+<div class="title">guide</div>
+<ol class="guide">
+<li>
+<p>Date : affichage de la date (peut etre desactivé)</p>
+</li>
+<li>
+<p>Off : bouton permettant de suspendre le planning</p>
+</li>
+<li>
+<p>On : bouton permettant d’activer le planning</p>
+</li>
+<li>
+<p>derniere commande :  affichage du nom de la derniere commande éxecutée</p>
+</li>
+<li>
+<p>prochaine commandee : affichage du nom de la prochaine commande (limité à la journée)</p>
+</li>
+<li>
+<p>Historique : permet d’accéder au graphique statistique (timeline).</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Statistique</caption>
+<colgroup>
+<col style="width: 80%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="imageblock left">
+<div class="content">
+<img src="images/desktop_stat.png" alt="desktop stat" width="800" height="300">
+</div>
+<div class="title">Figure 6. Statistique</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="olist guide">
+<div class="title">guide</div>
+<ol class="guide">
+<li>
+<p>liste des commandes exécutées</p>
+</li>
+<li>
+<p>date courante</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Vue possible</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="imageblock left">
+<div class="content">
+<img src="images/desktop_all.png" alt="desktop all">
+</div>
+<div class="title">Figure 1:normal</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Il s’agit ici de la vue nominale</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="imageblock left">
+<div class="content">
+<img src="images/desktop_date.png" alt="desktop date">
+</div>
+<div class="title">Figure 2:historique desactivé</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>cette vue est disponible lorsque<br>
+la case à cocher "historique" est desactivée</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="imageblock left">
+<div class="content">
+<img src="images/desktop_histo.png" alt="desktop histo">
+</div>
+<div class="title">Figure 3:date désactivée</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>cette vue est disponible lorsque<br>
+la case à cocher "date" est desactivée</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="imageblock left">
+<div class="content">
+<img src="images/desktop_button.png" alt="desktop button">
+</div>
+<div class="title">Figure 4:minimale</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>cette vue est disponible lorsque<br>
+les cases à cocher "historique" et "date" sont  desactivée</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq">FAQ</h2>
+<div class="sectionbody">
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>maj plugin</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lors de la mise à jour vers la version 04, il est conseillé d’effectuer une desactivation puis une reactivation du plugin</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>calcul sunset &amp; sunrise</p>
+<div class="ulist">
+<ul>
+<li>
+<p>le calcul du levé et couché de soleil est effectué à 1 heure du matin. Pour les nouveaux ssaTask,</p>
+</li>
+<li>
+<p>il se peut que le calcul n’ai pas encore ete effectué. Le plugin utilise alors une heure par defaut.</p>
+</li>
+<li>
+<p>les heures seront mis à jour des le prochain calcul</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="developeur">Developeur</h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>974steph</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changelog">Changelog</h2>
+<div class="sectionbody">
+<hr>
+<div class="ulist">
+<div class="title">version : 04 (janvier 2018)</div>
+<ul>
+<li>
+<p>ajout des fonctions sunset et sunrise</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">version : 03 (6 decembre 2017)</div>
+<ul>
+<li>
+<p>correction timeline</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">version : 02 (dec 2017)</div>
+<ul>
+<li>
+<p>ajout foncion dupliquer</p>
+</li>
+<li>
+<p>ajout configuration de la couleur de fonds</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">version : 01 (nov 2017)</div>
+<ul>
+<li>
+<p>version initiale</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="roadmap">Roadmap</h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    <aside class="large-3 columns">
+
+        <h4>Stéphane SAUTRON</h4>
+       
+      
+     
+    
+   
+
+        
+        <div class="panel">
+            <h5>ssaTask</h5>
+
+            <p> Ce Plugin permet de mettre en place un planning d'éxecution de vos commandes</p>
+           
+        </div>
+        <div class="panel">
+            
+            <p>
+            </p>
+<div class="toc"></div>
+            
+            
+        </div>
+
+        <div class="panel">
+            <h5>Don paypal </h5>
+
+            <p>J'accepte les dons sur <a href="https://www.paypal.me/stephanesautron">paypal</a> </p>
+        </div>
+    </aside>
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr>
+        <div class="row">
+            <div class="large-12 columns">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+
+$('.toc').toc({ title: '<h5>Menu',
+                headers: 'h1, h2',
+                showEffect: 'slideDown' 
+             });
+
+
+</script>
+</body>
+</html>

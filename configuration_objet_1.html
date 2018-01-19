@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]--><html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="description" content="documentation du plugin Task.">
+    <meta name="author" content="Your name goes here">
+    <meta name="copyright" content="Maybe consider a Creative Commons license">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/coderay.css">
+    <link rel="stylesheet" href="css/asciidoctor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="js/float-panel.js"></script>
+
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">ssaTask</a>
+            </h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sect1">
+<h2 id="configuration-d-un-ssatask">Configuration d’un ssaTask</h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>La configuration des équipements "ssaTask" est accessible à partir du menu plugin :
+il vous suffit de cliquer sur le bouton "ajouter" ou sur un équipement déjà présent.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ajout.png" alt="ajout">
+</div>
+</div>
+<div class="paragraph">
+<p>La configuration des Equipements "ssaTask" s’effectue par en trois onglets :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>configuration</p>
+</li>
+<li>
+<p>tâches</p>
+</li>
+<li>
+<p>commandes</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="onglet-configuration">Onglet "Configuration"</h3>
+<hr>
+<div class="paragraph">
+<p>Cette  première étape, commune aux plugins Jeedom, consiste au réglage des paramètres généraux du "ssaTask"</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/plugin_configuration.png" alt="plugin configuration">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Cette étape permet de définir, l’objet parent, l’activation et la visibilité du "ssaTAsk", ainsi que les informations habituelles.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Cet onglet offre aussi la possibilité de définir le comportement visuel du plugin grace aux cas à cocher :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>affichage date</p>
+</li>
+<li>
+<p>affichage historique</p>
+</li>
+<li>
+<p>couleur de fonds</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="onglet-tâches">Onglet "Tâches"</h3>
+<hr>
+<div class="paragraph">
+<p>Cet onglet permet la programation  de vos différentes commandes.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/plugin_tache.png" alt="plugin tache">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Imaginons que vous voulez allumer la lumiere tous les matin à 7 heures et ouvrir les volets à 7 heures trente, rien de plus simple.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Pour créer une tâche, il faut cliquer sur le bouton "Créer une Tâche".  Cela ajoute alors une tâche vide dans la liste des tâches.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="configuration">Configuration</h4>
+<div class="paragraph">
+<p>Rien de plus simple. commencez par donner un nom à votre tâche et fixez les différents paramètres</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="heure">Heure</h4>
+<div class="paragraph">
+<p>Il s’agit ici de definir l’heure d’exéution de votre commande.
+L’heure peut etre definit de manire automatique avec les boutons sunset et sunrise (l’heure correspondant a sunrise et sunset est calculé tous les jours à 1 heure du matin).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/heure.png" alt="heure">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Vous pouvez utilisez les boutons  pour diminuer l’heure et les minutes ou les entrer directement à l’aide de votre clavier.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+les boutons "sunrise" et "sunset" permettent d’indiquer au plugin d’exécuter la commande au levé ou au couché du soleil.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="commande">Commande</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+il s’agit dans cette section de configurer les commandes qui devrons etre executés.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Pour configurer une commande, il faut utiliser le bouton "Rechercher un équipement".
+Les commandes disponible sont des commandes de type "Action".
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Dans le cas ou vous voulez exécuter plusieurs actions il faut indiquer les differentes commandes  avec le séparateur "&amp;&amp;".<br>
+Dans mon exemple, j’ai deux radiateurs et j’indique donc :<br>
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Commande ON :#[developpement][radiateur1][On]#&amp;&amp;#[developpement][radiateur2][On]#</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="jour-d-application">Jour d’application</h4>
+<div class="paragraph">
+<p>il s’agit ici d’un planning d’application de la tâche. Vous pouvez choisir d’executer votre commande le lundi, le samedi ou les jours fériés.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="onglet-commandes">Onglet "Commandes"</h3>
+<div class="paragraph">
+<p>Le plugin propose, par defaut, 5 commandes.
+Vous ne pouvez pas modifier ces commandes.
+Elles permettent d’interagir avec l’IHM.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+les commandes  peuvent etres appelées à partir de vos scénarios ou autre modules. :
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    <aside class="large-3 columns">
+
+        <h4>Stéphane SAUTRON</h4>
+       
+      
+     
+    
+   
+
+        
+        <div class="panel">
+            <h5>ssaTask</h5>
+
+            <p> Ce Plugin permet de mettre en place un planning d'éxecution de vos commandes</p>
+           
+        </div>
+        <div class="panel">
+            
+            <p>
+            </p>
+<div class="toc"></div>
+            
+            
+        </div>
+
+        <div class="panel">
+            <h5>Don paypal </h5>
+
+            <p>J'accepte les dons sur <a href="https://www.paypal.me/stephanesautron">paypal</a> </p>
+        </div>
+    </aside>
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr>
+        <div class="row">
+            <div class="large-12 columns">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+
+$('.toc').toc({ title: '<h5>Menu',
+                headers: 'h1, h2',
+                showEffect: 'slideDown' 
+             });
+
+
+</script>
+</body>
+</html>
